@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Job Apply Tracker</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Job Apply Tracker</h1>
+    <p class="sub">Track your applications (Company, Role, Date, Status)</p>
+
+    <div class="card">
+      <input id="company" placeholder="Company (e.g., TCS)" />
+      <input id="role" placeholder="Role (e.g., React Developer)" />
+      <input id="date" type="date" />
+      <select id="status">
+        <option value="Applied">Applied</option>
+        <option value="Interview">Interview</option>
+        <option value="Offer">Offer</option>
+        <option value="Rejected">Rejected</option>
+      </select>
+      <button id="addBtn">Add</button>
+    </div>
+
+    <div class="card">
+      <input id="search" placeholder="Search by company/role..." />
+      <button id="clearAll">Clear All</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Role</th>
+          <th>Date</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="list"></tbody>
+    </table>
+
+    <p class="tip">Tip: Data is saved in your browser (localStorage).</p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
